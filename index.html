@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+    <div class="popup">
+            <div class="card">
+                <button class="card__close">X</button>
+                THANK YOU
+            </div>
+    </div>
+    <div class="container">
+        <h1 id="title" class="title">SURVEY FORM</h1>
+        <p id="description" class="desc">
+            We want to improve our services. Please let us know what we need to improve our services. Thank you sincerely.
+        </p>
+        <form id="survey-form" class="survey-form">
+            <label class="input__label input__container" id="name-label">
+                <div class="input__title left">*Name:</div>
+                <div class="right">
+                    <input type="text" id="name" required placeholder="Enter your name">
+                </div>
+            </label>
+            <label class="input__label input__container" id="email-label">
+                <div class="input__title left">*Email:</div>
+                <div class="right">
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+            </label>
+            <label class="input__label input__container" id="number-label">
+                <div class="input__title left">*Age:</div>
+                <div class="right">
+                    <input type="number" id="number" required placeholder="Enter your age" min="15" max="100">
+                </div>
+            </label>
+            <label class="input__label input__container">
+                <div class="input__title left">Which option best describes your current role?</div>
+                <div class="right">
+                    <select name="dropdown" id="dropdown">
+                        <option value="Student">Student</option>
+                        <option value="Fulltime Job">Fulltime Job</option>
+                        <option value="Fulltime Learner">Parttime Job</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </label>
+            <div class="introduce input__container">
+                <div class="input__title left">* How likely is that you would recommend 'Safe and Sound Coffee' to a friend?</div>
+                <div class="radio__introduce right">
+                    <label>
+                        <input type="radio" name="introduce" value="Definitely"> Definitely
+                    </label>
+                    <label>
+                        <input type="radio" name="introduce" value="Maybe"> Maybe <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="introduce" value="Not sure"> Not sure
+                    </label>
+                </div>
+            </div>
+            <div class="improve input__container">
+                <div class="input__title left">Things that should be improved in the future (Check all that apply)</div>
+                <div class="checkbox__improve right">
+                    <label>
+                        <input type="checkbox" value="Services"> Services
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Space"> Space
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Room"> Room
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Add more drinks"> Add more drinks
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Add more desserts"> Add more desserts
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Add more books"> Add more books
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Add more pets"> Add more pets
+                    </label>
+                </div>
+            </div>
+            <div class="comment input__container">
+                <div class="input__title left">Any Comments or Suggestions?</div>
+                <div class="right">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6Lfzum4UAAAAAPOVBPmvj_pZfW1vi0ooJ-74popY"></div>
+            <button id="submit" class="submit-btn">Submit</button>
+            <h4>The background by Isidoro151 / Freepik</h4>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
